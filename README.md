@@ -4,8 +4,8 @@
 _background_
 
 > in some situation, we found some bug in our running java code, but re-deploy the whole project is too expensive,
-> instead we can replace the jar file's entry with new class file
-> and let running jvm use the new class
+> instead we can replace the jar file's entry with new class file,
+> and let running jvm use the new class.  
 > this tool provide facility to accomplish such work.
 
 # build
