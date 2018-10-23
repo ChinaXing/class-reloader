@@ -13,7 +13,7 @@ public class Main {
 			javaHome = System.getProperty("java.home");
 		}
 		System.out.println("Java Home is :" + javaHome);
-		String toolLib = javaHome + "lib/tools.jar";
+		String toolLib = (javaHome.endsWith("/") ? javaHome : javaHome + "/") + "lib/tools.jar";
 		System.out.println("tools.jar : " + toolLib);
 		if(!new File(toolLib).exists()) {
 			System.err.println("error : tools.jar not exist !");
