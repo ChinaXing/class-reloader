@@ -9,6 +9,10 @@ import java.util.Date;
 public class Main {
 	public static void main(String[] args) throws Exception {
 		log(">>>>> -------------- Class-ReLoader -------------- <<<<<");
+		if(args.length < 3) {
+			logErr("usage : java -cp class-reloader.jar Main pid fullClassName classFile");
+			logErr(" will reload class `fullClassName` from .class file `classFile` in jvm thread `pid`");
+		}
 		String javaHome = System.getenv("JAVA_HOME");
 		if(javaHome == null || javaHome.equals("")) {
 			javaHome = System.getProperty("java.home");
